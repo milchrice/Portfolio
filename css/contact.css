@@ -1,0 +1,175 @@
+/* all */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #E5B6AC;
+    font-family: 'Cherry Swash', cursive;
+
+}
+
+/* mobile */
+/* header */
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(253, 253, 253, 0.5);
+    margin-bottom: 10px;
+    word-break: break-word;
+    font-family: 'Cherry Swash', cursive;
+    font-weight: bold;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navigation li {
+    margin-left: 10px;
+    margin: 0 20px;
+}
+
+/* contactpage */
+.contact {
+    color: #8B0000;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7vh;
+    min-height: 90vh;
+}
+
+
+
+.content {
+    height: 150px;
+}
+
+.button {
+    margin-top: 10px;
+    width: fit-content;
+}
+
+.button:hover {
+    color: blue;
+}
+
+
+#contactform {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 50%;
+    height: auto;
+}
+
+
+.footercontainer {
+    background-color: rgb(253, 253, 253, 0.5);
+    font-family: 'Cherry Swash', cursive;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    list-style: none;
+    margin-top: 10px;
+    ;
+}
+
+.footeritem {
+    margin: 0 20px;
+}
+
+
+
+/* desktop */
+@media (min-width: 800px) {
+
+    /* navigation bar */
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    /* footer */
+    .footer-li ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        overflow: hidden;
+    }
+
+    .footer-li li {
+        display: inline;
+        margin: 50px;
+    }
+
+    .footer-li a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 700;
+    }
+
+}
+
+/* From Esther */
+
+a,
+a:visited {
+  color: #313131;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea {
+  padding: 4px;
+  border-radius: 4px;
+  outline: 0;
+  border: 0;
+  width: 100%;
+  display: block;
+}
+
+#contactform {
+  max-width: 600px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(auto, 1fr);
+grid-column-gap: 20px;
+grid-row-gap: 20px;
+}
+
+.a {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.b {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.c { grid-area: 2 / 1 / 3 / 3; }
+.d { grid-area: 3 / 1 / 4 / 3; }
