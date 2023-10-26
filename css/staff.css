@@ -1,18 +1,18 @@
+/* ------------------------ For Mobile ------------------------ */
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* navigation bar */
 .header-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   padding: 10px;
   background-color: rgb(253, 253, 253, 0.5);
-  margin-bottom: 10px;
   word-break: break-word;
-  font-family: 'Cherry Swash', cursive;
   font-weight: bold;
 }
 
@@ -29,12 +29,22 @@
   padding: 0;
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .navigation li {
-  margin-left: 10px;
-  margin: 0 20px;
+  margin-left: 25px;
 }
+
+a,
+a:visited {
+  color: #313131;
+}
+
+a {
+  text-decoration: none;
+}
+
 
 
 /* Cherry blossom photo header */
@@ -61,19 +71,26 @@
 
 
 .staff {
-
-  color: black;
-  font-family: 'Cherry Swash', cursive;
+  color: #313131;
   margin-top: 0;
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.staff img {
+  margin: 10px;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   row-gap: 10px;
   column-gap: 5px;
   grid-gap: 10px;
   margin-left: 20px;
+  text-align: center;
 }
 
 .grid-item {
@@ -86,29 +103,23 @@
 }
 
 
-/* mobile size */
-@media screen and (max-width: 480px) {
-  .grid-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
+/* tablet size */
+@media screen and (min-width: 768px) {
   .staff {
     text-align: center;
+    font-size: 16px;
   }
-}
 
-/* tablet size */
-@media screen and (max-width: 1024px) {
 
   .grid-container {
     grid-template-columns: 1fr 1fr;
     text-align: center;
   }
 
-  .staff {
-    text-align: center;
+  .grid-container p {
+    font-size: 16px;
   }
+
 
 }
 
@@ -119,4 +130,112 @@
     text-align: center;
   }
 
+}
+
+/* ------------------------ For Desktop ------------------------ */
+@media (min-width: 1200px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* navigation bar */
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(253, 253, 253, 0.5);
+    word-break: break-word;
+    font-weight: bold;
+  }
+  
+  .logo {
+    margin-right: auto;
+  }
+  
+  .logo img {
+    width: 100px;
+  }
+  
+  .navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .navigation li {
+    margin-left: 10px;
+    margin: 0 20px;
+  }
+  
+  
+  /* Cherry blossom photo header */
+  .header img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .header {
+    margin-bottom: 0;
+  }
+  
+  /* description of About us */
+  .introduction {
+    margin-bottom: 30px;
+  }
+  
+  
+  /* images and descriotion of staff */
+  .staffimages {
+    width: 80%;
+    height: auto;
+  }
+  
+  
+  .staff {
+  
+    color: black;
+    font-family: 'Cherry Swash', cursive;
+    margin-top: 0;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 5px;
+    grid-gap: 10px;
+    margin-left: 20px;
+  }
+  
+  .grid-item {
+    display: block;
+  }
+  
+  .grid-item img {
+    width: 80%;
+    height: auto;
+  }
+  
+
+
+
+ /* footer */
+ .footercontainer {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  list-style: none;
+  margin-top: 10px;
+
+}
+
+.footeritem {
+  margin: 0 20px;
+}
 }

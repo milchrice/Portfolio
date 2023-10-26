@@ -1,19 +1,19 @@
+/* ------------------------ For Mobile ------------------------ */
 body {
     background-color: #FFE4E1;
-    color: #8B0000;
-    font-family: 'Cherry Swash', cursive;
+    color: #313131;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* naivigation bar */
 .header-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding: 10px;
     background-color: rgb(253, 253, 253, 0.5);
     margin-bottom: 10px;
     word-break: break-word;
-    font-family: 'Cherry Swash', cursive;
     font-weight: bold;
 }
 
@@ -30,15 +30,29 @@ body {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .navigation li {
-    margin-left: 10px;
-    margin: 0 20px;
+    margin-left: 25px;
+}
+
+a,
+a:visited {
+    color: #313131;
+}
+
+a {
+    text-decoration: none;
 }
 
 
+
 /* Cherry blossom photo header */
+.header h1 {
+    margin: 20px;
+}
+
 .header img {
     width: 100%;
     height: auto;
@@ -47,58 +61,92 @@ body {
 
 /*review comment*/
 .review {
-    color: #8B0000;
-    font-family: 'Cherry Swash', cursive;
+    color: #313131;
     margin-top: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 24px 6%;
-}
-
-.grid-review {
-    border: 1px solid #8B0000;
-    background-color: #FFE4E1;
-    border-radius: 10px 10px 10px 10px;
-    padding: 20px;
-    text-align: center;
-    margin: 10px 10px 10px 10px;
+    grid-template-columns: 1fr;
+    gap: 5px 6%;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .review img {
-    width: 30%;
-    height: auto;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
+    object-fit: cover;
+}
+
+.grid-review {
+
+    background-color: #FFE4E1;
+    border-radius: 10px 10px 10px 10px;
+    padding: 5px;
+    margin: 10px;
+    width: 90%;
+    text-align: center;
 }
 
 
 
-/* mobile size */
-@media screen and (max-width: 480px) {
+.review p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
 
+/* footer */
+footer {
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(253, 253, 253, 0.5);
+    margin-top: 0;
+}
 
-    .review {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 30%;
-        font-size: 20%;
-    }
+.footercontainer {
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    list-style: none;
+}
 
-    .review img {
-        width: 30%;
-        height: auto;
-        border-radius: 50%;
-    }
+.footeritem {
+    margin: 0 20px;
+}
 
+.footercontainer ul {
+    display: flex;
+    flex-direction: column;
 
+    overflow: hidden;
+    padding-left: 0
+}
+
+.footercontainer li {
+    padding: 10px;
+}
+
+.footercontainer a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    padding-left: 0
 }
 
 
 /* tablet size */
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 768px) {
     .review {
+        display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 10px;
         text-align: center;
     }
 
+    .review img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 
     .nav-li ul {
         list-style: none;
@@ -133,4 +181,107 @@ body {
 
 
 
+}
+
+/* ------------------------ For Desktop ------------------------ */
+@media (min-width: 1200px) {
+    body {
+        background-color: #FFE4E1;
+        color: #313131;
+    }
+
+    /* naivigation bar */
+    .header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        background-color: rgb(253, 253, 253, 0.5);
+        margin-bottom: 10px;
+        word-break: break-word;
+
+        font-weight: bold;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .navigation ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    .navigation li {
+        margin-left: 10px;
+        margin: 0 20px;
+    }
+
+    a,
+    a:visited {
+        color: #313131;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+
+    /* Cherry blossom photo header */
+    .header h1 {
+        margin: 10px;
+    }
+
+    .header img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /*review comment*/
+    .review {
+        color: #313131;
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 24px 6%;
+    }
+
+    .grid-review {
+        background-color: #FFE4E1;
+        border-radius: 10px 10px 10px 10px;
+        padding: 20px;
+        text-align: center;
+        margin: 10px 10px 10px 10px;
+    }
+
+    .review img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .review p {
+        margin-bottom: 10px;
+    }
+
+    /* footer */
+    .footercontainer {
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+        padding-bottom: 30px;
+        list-style: none;
+        margin-top: 10px;
+
+    }
 }
